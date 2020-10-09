@@ -1,8 +1,12 @@
 @extends('layouts/application')
 
 @section('content')
-<h1 class="text-center">Liste produits</h1>
+<h1 id="product-page" class="text-center">Liste produits</h1>
 @include('partials.forms.addProducts')
+<hr>
+<div id="app">
+  <product-card></product-card>
+</div>
 <hr>
 <div class="table-responsive text-nowrap d-flex justify-content-center flex-wrap">
 
@@ -14,7 +18,7 @@
               <p class="card-text text-center font-weight-bold text-black" >{{$product->nbmade}} produite</p>
               <p class="card-text text-center font-weight-bold text-black" >{{$product->cost}} cm</p>
               <p class="card-text text-center font-weight-bold text-black" >{{$product->price}}€</p>
-              <p class="card-text text-center font-weight-bold text-black" >{{$product->productionTime}} min</p>
+              <p class="card-text text-center font-weight-bold text-black" >{{$product->production_time}} min</p>
             </div>
         </div> 
         @endforeach

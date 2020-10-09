@@ -1,12 +1,15 @@
 @extends('layouts/application')
 
 @section('content')
-<h1 class="text-center">Stock</h1>
+<h1 id="stock-page" class="text-center">Stock</h1>
 <div class="addFormTissus">
     @include('partials/forms/addStock')
 </div>
 <hr>
-@foreach ($stocks as $item)
+<div id="app">
+  <stock-card></stock-card>
+</div>
+{{-- @foreach ($stocks as $item)
   <h1 class="text-center">{{$item[0]->type}}</h1>
   <div class="d-flex justify-content-center flex-wrap">
     @for ($i = 0; $i < $item->count(); $i++)
@@ -20,5 +23,5 @@
     @endfor
   </div>
   <hr>
-@endforeach
+@endforeach --}}
 @endsection
