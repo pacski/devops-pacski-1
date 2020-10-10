@@ -30,7 +30,7 @@ jobs:
       - name: npm run development
         run: | 
           npm install
-          npm run production
+          npm run development
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
