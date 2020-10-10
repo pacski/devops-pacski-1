@@ -1,0 +1,81 @@
+
+
+.addFormTissus{
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 50%;;
+margin: auto;
+text-align:center;
+}
+
+
+.nearEmpty{
+    background: orange
+}
+
+.empty{
+ background: red;
+}
+
+tr:hover{
+    opacity: 0.5;
+}
+
+.addFormCommands{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    text-align:center;
+}
+
+.btn-pink{
+    background-color: #efc6cc;
+    border: #efc6cc;
+    color: black;
+    border-radius: 5px;
+    border:none;
+    height: 30px;
+}
+
+.btn-pink:hover{
+    background-color: #b86f7a;
+    border: none
+}
+
+
+thead tr th{
+    color: #b86f7a;
+    font: bold
+}
+.filter select, input{
+    margin: 0 5px
+}
+
+.filterReset{
+    margin: 5px 0px
+}
+
+.form-control{
+    margin-left: 0%;
+}
+
+
+.container-stats{
+    border: solid 10px #efc6cc;
+    width: 50%;
+    margin:10px ;
+    -webkit-box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+    box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+}
+.little-container{
+    border: solid 10px #efc6cc;
+    margin:10px ;
+    width: 20%;
+    -webkit-box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+    box-shadow: -1px 18px 10px 0px rgba(0,0,0,0.67);
+}
