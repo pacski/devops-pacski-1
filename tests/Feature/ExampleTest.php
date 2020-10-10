@@ -10,6 +10,8 @@ use database\factories\UserFactory;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      *
