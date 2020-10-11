@@ -31,7 +31,7 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DB_CONNECTION: pqsql
-          DB_DATABASE: pacski-project-local
+          DATABASE_URL: postgres://ajwefdfyzacqzb:469d7f67a624186c7679cd69661f929e547ab4c4502c33f983fb526d44d6ab86@ec2-46-137-124-19.eu-west-1.compute.amazonaws.com:5432/d3e35a9slpopgj
         run: vendor/bin/phpunit
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6

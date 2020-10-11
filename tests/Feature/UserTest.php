@@ -19,6 +19,8 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        $DATABASE_URL=parse_url(env('DATABASE_URL'));
+        
         Passport::actingAs(
             User::factory()->make()
             ,['*']
