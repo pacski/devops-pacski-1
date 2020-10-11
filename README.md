@@ -1,11 +1,14 @@
 Pacski project
 
+stack : Laravel + vuejs / jquery 
+bdd : postgresql
+hebergement : heroku
 
 url prod: http://pacski-project.herokuapp.com/
 url staging: http://pacski-project-staging.herokuapp.com/
 
 
-2 workflows fonctionne pratiquement a l'identique : 
+2 workflows fonctionnent pratiquement a l'identique : 
 
 production.yml
 
