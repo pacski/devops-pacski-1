@@ -19,6 +19,7 @@ class CommandPageTest extends TestCase
      */
     public function testShowCommandPage()
     {
+        $this->withoutExceptionHandling();
         Passport::actingAs(
             User::factory()->make()
             ,['*']

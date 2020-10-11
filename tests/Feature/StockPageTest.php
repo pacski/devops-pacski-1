@@ -19,6 +19,7 @@ class StockPageTest extends TestCase
      */
     public function testShowStockPage()
     {
+        $this->withoutExceptionHandling();
         Passport::actingAs(
             User::factory()->make()
             ,['*']

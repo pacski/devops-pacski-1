@@ -19,6 +19,7 @@ class FabricPageTest extends TestCase
      */
     public function testShowFabricPage()
     {
+        $this->withoutExceptionHandling();
         Passport::actingAs(
             User::factory()->make()
             ,['*']

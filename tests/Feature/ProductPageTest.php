@@ -19,6 +19,7 @@ class ProductPageTest extends TestCase
      */
     public function testShowProductPage()
     {
+        $this->withoutExceptionHandling();
         Passport::actingAs(
             User::factory()->make()
             ,['*']
