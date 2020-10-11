@@ -3,11 +3,15 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Laravel\Passport\Passport;
+use App\Models\User;
+use database\factories\UserFactory;
 
 class CommandPageTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * A basic feature test example.
      *
@@ -15,8 +19,11 @@ class CommandPageTest extends TestCase
      */
     public function testShowCommandPage()
     {
+        Passport::actingAs(
+            User::factory()->make()
+            ,['*']
+        );
         $response = $this->get('/command');
-
         $response->assertStatus(200);
     }
 }
