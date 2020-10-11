@@ -67,7 +67,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL_STAGING'),
+            'url' => env('DATABASE_URL'),
             'host' => isset($DATABASE_URL['host']) ? $DATABASE_URL['host'] : null,
             'port' => isset($DATABASE_URL['port']) ? $DATABASE_URL['port'] : null,
             'database' => ltrim($DATABASE_URL['path'], '/'),
