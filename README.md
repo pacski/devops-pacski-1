@@ -1,5 +1,10 @@
 Pacski project
 
+Résumé du projet: 
+
+Application destiné aux personnes faisant de la couture et souhaitant gerer le stock de leurs matières premieres (tissus et autres materiaux).
+il est également possible d'enregistrer des commandes pour un clients et celle-ci influencera sur le stock déja enregistré.
+
 stack : Laravel + vuejs / jquery 
 bdd : postgresql
 hebergement : heroku
