@@ -8,6 +8,7 @@ use App\Http\Controllers\FabricController;
 use App\Http\Controllers\CommandController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 
 
 /*
@@ -23,6 +24,7 @@ use App\Http\Controllers\HomeController;
 
 // Route::get('/','GeneralController@index')->middleware('auth')
 //     ->name('pages.home.index');
+
 Route::get('/', [GeneralController::class, 'index'])->middleware('auth')->name('pages.home.index');
 
 Route::prefix('/product')->group(function (){
@@ -52,7 +54,7 @@ Route::prefix('/my-account')->group(function (){
     Route::get('', [UserController::class, 'index'])->name('pages.user.index');;
 });
 
-Auth::routes();
+// Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('user.login');
 Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');
 
@@ -63,3 +65,7 @@ Route::prefix('/user')->group(function (){
     Route::get('/index', 'UserController@index')
         ->name('users.index');
 });
+
+// LOGIN
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate');

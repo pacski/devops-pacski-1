@@ -5,13 +5,17 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+
 
 class LoginController extends Controller
+
 {
     /*
     |--------------------------------------------------------------------------
     | Login Controller
-    |--------------------------------------------------------------------------
+    |-----
+    ---------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
     | redirecting them to your home screen. The controller uses a trait
@@ -19,10 +23,11 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    // use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
+     
      *
      * @var string
      */
@@ -36,5 +41,18 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    public function login()
+    {
+        return view('auth.login');
+    }
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (\Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->route('pages.home.index');
+        }
     }
 }

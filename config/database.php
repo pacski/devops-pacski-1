@@ -2,7 +2,20 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url(env('DATABASE_URL'));
+if(env('APP_ENV') == 'local')
+{
+    $DATABASE_URL = [];
+
+    $DATABASE_URL['host'] = env('DATABASE_URL');
+    $DATABASE_URL['port'] = env('DB_PORT');
+    $DATABASE_URL['path'] = env('DATABASE_URL');
+    $DATABASE_URL['user'] = env('DB_USERNAME');
+    $DATABASE_URL['pass'] = env('DB_PASSWORD');
+}
+else
+{
+    $DATABASE_URL=parse_url(env('DATABASE_URL'));
+}
 
 return [
 
